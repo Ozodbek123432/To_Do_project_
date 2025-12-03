@@ -8,7 +8,6 @@ from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated, AllowAny,IsAdminUser
 from rest_framework.exceptions import NotFound
 
-
 # ==================== AUTHOR ====================
 
 class AuthorDataCreateView(generics.CreateAPIView):

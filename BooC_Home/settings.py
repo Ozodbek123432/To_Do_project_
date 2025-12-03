@@ -40,11 +40,12 @@ INSTALLED_APPS = [
     'book',
     'rest_framework',
     'rest_framework_simplejwt',
-    'drf_spectacular_sidecar',
+    'drf_spectacular',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -142,24 +143,20 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# Swagger va Redoc sozlamalari
+
 SPECTACULAR_SETTINGS = {
-    'TITLE': 'My Book API',  # o‘zingizning loyiha nomingiz
-    'DESCRIPTION': 'Kitoblar, mualliflar va janrlar uchun API',
+    'TITLE': 'Your Project API',
+        'DESCRIPTION': 'Your project description',
     'VERSION': '1.0.0',
-    'SERVE_INCLUDE_SCHEMA': False,
-
-    # Chiroyli dizayn (Swagger UI + Redoc)
-    'SWAGGER_UI_DIST': 'SIDECAR',  # yangi dizayn
-    'SWAGGER_UI_FAVICON_HREF': 'SIDECAR',
-    'REDOC_DIST': 'SIDECAR',
-
-    # JWT uchun avtorizatsiya tugmasi chiqishi uchun
+    'SERVE_PERMISSIONS': [
+        'rest_framework.permissions.IsAuthenticated'],
+    'SERVE_AUTHENTICATION': [
+        'rest_framework.authentication.BasicAuthentication'],
+    'SWAGGER_UI_SETTINGS': {
+        'DeepLinking': True,
+        'DisplayOperationId': True,
+    },
     'COMPONENT_SPLIT_REQUEST': True,
-    'SECURITY': [{
-        'type': 'http',
-        'scheme': 'bearer',
-        'bearerFormat': 'JWT',
-        'name': 'JWT Authentication',
-    }],
+    'SORT_OPERATIONS': False,
 }
+

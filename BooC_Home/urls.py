@@ -37,7 +37,3 @@ urlpatterns = [
     path('authors/<int:pk>/', AuthorDataPutAndPatch.as_view(), name='ozgartish'),
     path('authors/<int:pk>/delete/', AuthorDataDeleteView.as_view(), name='ooxhrish'),  #
 ]
-# {
-#     "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc2NDUxODY3OSwiaWF0IjoxNzY0NDMyMjc5LCJqdGkiOiJkMTgzYWQyMDZhODM0NWI2YmY4NDcxYTliYjVmODNhYiIsInVzZXJfaWQiOiIxIn0.sTqiMLdqeu2d47t8exRIWCUI5k4UVcbfIbwpXnmj4tQ",
-#     "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY0NDMyNTc5LCJpYXQiOjE3NjQ0MzIyNzksImp0aSI6IjY0MDljZGUxMGUxZTQwOTI5OGQ3NDdiODk5ZjJiY2ZkIiwidXNlcl9pZCI6IjEifQ.LPV1S-OSRWO8Td4ELCOYOazKxZpEx9z_AGy-kGapDDw"
-# }
